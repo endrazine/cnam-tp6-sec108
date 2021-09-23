@@ -1,9 +1,9 @@
 
-# CNAM TP6 : Aggrégation des logs via Splunk
+# CNAM TP6 : Agrégation des logs via Splunk
 
-Le but de ces Travaux Pratiques est d'installer un aggrégateur de logs sur le serveur Linux sécurisé implémenté durant le TP 3.
+Le but de ces Travaux Pratiques est d'installer un agrégateur de logs sur le serveur Linux sécurisé implémenté durant le TP 3.
 
-Nous allons utiliser un aggrégateur commercial en version gratuite (Splunk) dans le cloud.
+Nous allons utiliser un agrégateur commercial en version gratuite (Splunk) dans le cloud.
 
 ## Enregistrement aupres de Splunk
 
