@@ -75,6 +75,116 @@ Note: La commande "splunk" décrite dans la documentation est présente sous /op
 	root@moabishells:~# 
 
 
+Lancer la commande ./spluk start à partir du repertoire /opt/splunk/bin pour lancer l'installation:
+
+	root@moabishells:/opt/splunk/bin# ./splunk start
+	SPLUNK GENERAL TERMS
+
+	Last Updated: August 12, 2021
+
+	(...)
+	SPLUNK GENERAL TERMS (August 2021)
+
+	Do you agree with this license? [y/n]: y           
+
+	This appears to be your first time running this version of Splunk.
+
+	Splunk software must create an administrator account during startup. Otherwise, you cannot log in.
+	Create credentials for the administrator account.
+	Characters do not appear on the screen when you type in credentials.
+
+	Please enter an administrator username: admin
+	Password must contain at least:
+	   * 8 total printable ASCII character(s).
+	Please enter a new password: 
+	Please confirm new password: 
+	Copying '/opt/splunk/etc/openldap/ldap.conf.default' to '/opt/splunk/etc/openldap/ldap.conf'.
+	Generating RSA private key, 2048 bit long modulus
+	............+++++
+	.............+++++
+	e is 65537 (0x10001)
+	writing RSA key
+
+	Generating RSA private key, 2048 bit long modulus
+	.................+++++
+	....................................................+++++
+	e is 65537 (0x10001)
+	writing RSA key
+
+	Moving '/opt/splunk/share/splunk/search_mrsparkle/modules.new' to '/opt/splunk/share/splunk/search_mrsparkle/modules'.
+
+	Splunk> See your world.  Maybe wish you hadn't.
+
+	Checking prerequisites...
+		Checking http port [8000]: open
+		Checking mgmt port [8089]: open
+		Checking appserver port [127.0.0.1:8065]: open
+		Checking kvstore port [8191]: open
+		Checking configuration... Done.
+			Creating: /opt/splunk/var/lib/splunk
+			Creating: /opt/splunk/var/run/splunk
+			Creating: /opt/splunk/var/run/splunk/appserver/i18n
+			Creating: /opt/splunk/var/run/splunk/appserver/modules/static/css
+			Creating: /opt/splunk/var/run/splunk/upload
+			Creating: /opt/splunk/var/run/splunk/search_telemetry
+			Creating: /opt/splunk/var/spool/splunk
+			Creating: /opt/splunk/var/spool/dirmoncache
+			Creating: /opt/splunk/var/lib/splunk/authDb
+			Creating: /opt/splunk/var/lib/splunk/hashDb
+	New certs have been generated in '/opt/splunk/etc/auth'.
+		Checking critical directories...	Done
+		Checking indexes...
+			Validated: _audit _internal _introspection _metrics _metrics_rollup _telemetry _thefishbucket history main summary
+		Done
+		Checking filesystem compatibility...  Done
+		Checking conf files for problems...
+		Done
+		Checking default conf files for edits...
+		Validating installed files against hashes from '/opt/splunk/splunk-8.2.2.1-ae6821b7c64b-linux-2.6-x86_64-manifest'
+		All installed files intact.
+		Done
+		Printing Splunk Cloud-only settings...
+			Cloud-only setting "enableLogLevels (value :<boolean>)", defined in stanza [default] for spec "audit.conf.spec".
+			Cloud-only setting "environment (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "iac.token.expiration (value :<integer>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "iac.url (value :<url>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "kvservice.auth.mode (value :external | vault | bridge)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "kvservice.namespace (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "kvservice.principal.client.id (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "kvservice.principal.client.secret (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "kvservice.principal.id (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "kvservice.principal.token (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "scs-kvstore-disabled (value :<boolean>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "scsTokenScriptPath (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+			Cloud-only setting "tenant (value :<string>)", defined in stanza [scs] for spec "/opt/splunk/etc/system/README/server.conf.spec".
+	All preliminary checks passed.
+
+	Starting splunk server daemon (splunkd)...  
+	Generating a RSA private key
+	................................................................+++++
+	..........................+++++
+	writing new private key to 'privKeySecure.pem'
+	-----
+	Signature ok
+	subject=/CN=moabishells/O=SplunkUser
+	Getting CA Private Key
+	writing RSA key
+	Done
+
+
+	Waiting for web server at http://127.0.0.1:8000 to be available.............. Done
+
+
+	If you get stuck, we're here to help.  
+	Look for answers here: http://docs.splunk.com
+
+	The Splunk web interface is at http://moabishells:8000
+
+	root@moabishells:/opt/splunk/bin# 
+
+
+
+
 Manuel: https://www.splunk.com/en_us/download/splunk-enterprise/thank-you-enterprise.html
 
 ## Configuration du forwarder
