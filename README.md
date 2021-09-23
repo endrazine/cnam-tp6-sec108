@@ -191,6 +191,28 @@ Manuel: https://www.splunk.com/en_us/download/splunk-enterprise/thank-you-enterp
 
 Configurer le forwarder pour envoyer les logs depuis /var/log/ vers votre instance de Splunk server Enterprise.
 
+
+	root@moabishells:/opt/splunkforwarder/bin# ./splunk start --accept-license
+
+	This appears to be your first time running this version of Splunk.
+
+	Splunk software must create an administrator account during startup. Otherwise, you cannot log in.
+	Create credentials for the administrator account.
+	Characters do not appear on the screen when you type in credentials.
+
+	Please enter an administrator username: admin
+	Password must contain at least:
+	   * 8 total printable ASCII character(s).
+	Please enter a new password: 
+	Please confirm new password: 
+	(...)
+
+	root@moabishells:/opt/splunkforwarder/bin# ./splunk add forward-server 127.0.0.1:9997 -auth admin:password 
+	Added forwarding to: 127.0.0.1:9997.
+	root@moabishells:/opt/splunkforwarder/bin# ./splunk add monitor /var/log/
+	Added monitor of '/var/log'.
+	root@moabishells:/opt/splunkforwarder/bin#
+
 ## Observation des logs
 
 Un fois paramétrés, vos logs apparaissent dans la console de Splunk Enterprise.
