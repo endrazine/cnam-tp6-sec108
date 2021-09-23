@@ -207,8 +207,8 @@ Configurer le forwarder pour envoyer les logs depuis /var/log/ vers votre instan
 	Please confirm new password: 
 	(...)
 
-	root@moabishells:/opt/splunkforwarder/bin# ./splunk add forward-server 127.0.0.1:9997 -auth admin:password 
-	Added forwarding to: 127.0.0.1:9997.
+	root@moabishells:/opt/splunkforwarder/bin# ./splunk add forward-server <votre_ip>:9997 -auth admin:password 
+	Added forwarding to: <votre_ip>:9997.
 	root@moabishells:/opt/splunkforwarder/bin# ./splunk add monitor /var/log/
 	Added monitor of '/var/log'.
 	root@moabishells:/opt/splunkforwarder/bin#
